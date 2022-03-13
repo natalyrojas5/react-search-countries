@@ -94,7 +94,7 @@ const CardBigCountryComponent = ({
             <SkeletonComponent typeSeketon="text" />
           ) : (
             <p className="mb-0">
-              <b>Borders:</b>
+              <b>Border Countries:</b>
             </p>
           )}
           {isLoading ? (
