@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CountriesContext } from "../context/CountriesContext";
+import scrollTop from "../utils/scrollTop";
 
 const useSearchCountries = () => {
   const { countries, setCountries } = useContext(CountriesContext);
@@ -15,6 +16,7 @@ const useSearchCountries = () => {
       ...prev,
       current,
     }));
+    scrollTop();
   };
 
   const searching = ({ target: { value } }) => {
