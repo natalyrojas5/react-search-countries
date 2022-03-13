@@ -10,7 +10,7 @@ const CountryView = () => {
   const navigate = useNavigate();
   let { name } = useParams();
 
-  const { theme } = useContext(CountriesContext);
+  const { theme, setCountries } = useContext(CountriesContext);
   const { data, isLoading } = useGetCountry(name);
 
   return (
@@ -19,7 +19,13 @@ const CountryView = () => {
       <div className="py-3 w-container content-main">
         <button
           className="shadow element btn-back mb-2 pointer"
-          onClick={() => navigate("/")}
+          onClick={() => {
+            navigate("/");
+            setCountries((prev) => ({
+              ...prev,
+              isLoading: true,
+            }));
+          }}
         >
           Back
         </button>

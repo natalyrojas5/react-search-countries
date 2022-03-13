@@ -11,7 +11,7 @@ const CountriesView = () => {
 
   useEffect(() => {
     getCountries();
-  }, []);
+  }, [getCountries]);
 
   return (
     <main className={"theme-" + theme}>

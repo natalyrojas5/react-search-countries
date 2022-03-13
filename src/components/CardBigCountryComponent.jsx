@@ -90,13 +90,13 @@ const CardBigCountryComponent = ({
         )}
 
         <div className="d-grid-col-2 mt-4 border-countries">
-          <p className="mb-0">
-            {isLoading ? (
-              <SkeletonComponent typeSeketon="text" />
-            ) : (
+          {isLoading ? (
+            <SkeletonComponent typeSeketon="text" />
+          ) : (
+            <p className="mb-0">
               <b>Borders:</b>
-            )}
-          </p>
+            </p>
+          )}
           {isLoading ? (
             <div className="countries">
               {[1, 2, 3, 4, 5, 6].map((i) => (

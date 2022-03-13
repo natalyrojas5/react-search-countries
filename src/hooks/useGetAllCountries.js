@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { countriesServices } from "../services/countriesServices";
 
 const useGetAllCountries = () => {
@@ -13,8 +13,8 @@ const useGetAllCountries = () => {
     current: [],
   });
 
-  const getCountries = async () => {
-    if (countries.data.length > 0) return;
+  const getCountries = useCallback(async () => {
+
     setCountries((prev) => ({
       ...prev,
       isLoading: true,
@@ -48,7 +48,7 @@ const useGetAllCountries = () => {
         current: countries,
       }));
     }
-  };
+  }, []);
 
   return {
     regions,
