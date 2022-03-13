@@ -1,0 +1,57 @@
+/* MAIN */
+.skeleton {
+  background-color: #ddd;
+}
+.skeleton-wrapper {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.shimmer-wrapper {
+  animation: loading 2.5s infinite;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.shimmer {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.04);
+  height: 100%;
+  width: 50%;
+  transform: skew(-20deg);
+}
+
+.dark .shimmer {
+  background: rgba(255, 255, 255, 0.06);
+}
+@keyframes loading {
+  0% {
+    transform: translateX(-150%);
+  }
+  50% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+.skeleton {
+  border-radius: 6px;
+
+  &-card-small {
+    height: 360px;
+  }
+  &-title {
+    height: 2.4rem;
+  }
+  &-text {
+    height: 1.6rem;
+  }
+}

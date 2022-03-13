@@ -1,0 +1,171 @@
+.header {
+  padding: 1.6rem 1.5rem;
+  flex-direction: row;
+  align-items: center;
+  h1 {
+    font-size: 1.8rem;
+  }
+  span {
+    font-weight: 700;
+  }
+}
+
+.search {
+  max-width: 380px;
+  width: 100%;
+  position: relative;
+
+  & ion-icon {
+    position: absolute;
+    top: 20%;
+    left: 15px;
+    font-size: 1.8rem;
+    z-index: 5;
+  }
+  & input {
+    padding-left: 3rem;
+  }
+}
+
+.search-and-filter {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 1.5rem;
+  @media (max-width: 991.98px) {
+    gap: 1rem;
+    flex-direction: column;
+    input {
+      max-width: 100%;
+    }
+  }
+}
+
+.grid-countries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.5rem;
+  overflow: auto;
+  max-height: 65vh;
+  max-width: 1170px;
+  padding: 0;
+  padding-right: 1.5rem;
+  width: 100%;
+  @media (max-width: 991.98px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-right: 10px;
+    max-height: 50vh;
+  }
+  @media (max-width: 767.98px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 
+  ***************************
+  **** card-small-and-big ***
+  ***************************
+*/
+.card-small,
+.card-big {
+  border-radius: 6px;
+  overflow: hidden;
+  &-body {
+    padding: 1.4rem;
+    padding-bottom: 2rem;
+
+    h1 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.card-small {
+  &-img {
+    height: 150px;
+    overflow: hidden;
+  }
+  &:hover {
+    img {
+      transform: scale(1.5);
+    }
+  }
+  img {
+    max-height: 150px;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.card-big {
+  background-color: transparent !important;
+  max-width: 1200px;
+  &-body {
+    @media (max-width: 991.98px) {
+      padding: 0rem;
+      padding-top: 2rem;
+    }
+  }
+  & .border-countries {
+    margin-top: 4rem;
+    grid-template-columns: 10rem 1fr;
+    & .countries {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      & div.skeleton-wrapper {
+        width: 25%;
+      }
+      @media (max-width: 991.98px) {
+        margin-top: 12px;
+      }
+    }
+    @media (max-width: 991.98px) {
+      grid-template-columns: 1fr;
+      margin-top: 1rem;
+    }
+  }
+  @media (max-width: 991.98px) {
+    align-items: flex-start;
+    flex-direction: column;
+    height: 55vh;
+    overflow: auto;
+    overflow-x: hidden;
+    padding-right: 1.5rem;
+    & .skeleton-wrapper {
+      margin-bottom: 12px;
+    }
+  }
+  & h1 {
+    font-size: 2rem;
+  }
+  & p {
+    margin-bottom: 12px;
+  }
+
+  & img {
+    max-width: 520px;
+    border-radius: 6px;
+  }
+  & button {
+    min-width: 120px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  & .border-countries p {
+    margin-bottom: 0px;
+  }
+}
+.empty-container {
+  padding: 1rem;
+  border-radius: 6px;
+  & h1 {
+    font-size: 1.4rem;
+  }
+}

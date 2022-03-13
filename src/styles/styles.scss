@@ -1,0 +1,73 @@
+@import "./settings";
+@import "./globals";
+
+.w-container {
+  max-width: 1200px;
+  min-width: 1000px;
+  margin: auto;
+  width: 100%;
+  padding: 1.6rem 1.5rem;
+  @media (max-width: 1199.98px) {
+    min-width: initial;
+    width: initial;
+  }
+}
+
+.content-main {
+  padding: 1.6rem 1.5rem;
+}
+
+@import "./components";
+@import "./skeletons";
+.btn-back {
+  max-width: 140px;
+  width: 100%;
+  padding: 1rem;
+}
+
+@mixin themeColors($THEME) {
+  background-color: map-get($colors, $THEME + "-bg");
+  transition: 0.4s ease-in background-color;
+  min-height: 100vh;
+  header {
+    position: sticky;
+    top: 0px;
+  }
+  & ion-icon {
+    color: map-get($colors, $THEME + "-text");
+  }
+  & .empty-container {
+    background-color: map-get($colors, $THEME + "-element");
+    color: map-get($colors, $THEME + "-text");
+  }
+  & .element {
+    background-color: map-get($colors, $THEME + "-element");
+    transition: 0.4s ease-in background-color;
+    color: map-get($colors, $THEME + "-text");
+    &::placeholder {
+      color: map-get($colors, $THEME + "-text");
+    }
+    & .header {
+      color: map-get($colors, $THEME + "-title");
+    }
+
+    & .card-small-body h1,
+    & .card-big-body h1 {
+      color: map-get($colors, $THEME + "-title");
+    }
+    & .card-big-body button {
+      background-color: map-get($colors, $THEME + "-element");
+      color: map-get($colors, $THEME + "-text");
+    }
+  }
+  & .skeleton {
+    background-color: map-get($colors, $THEME + "-element");
+  }
+}
+
+.theme-dark {
+  @include themeColors("dark");
+}
+.theme-light {
+  @include themeColors("light");
+}
