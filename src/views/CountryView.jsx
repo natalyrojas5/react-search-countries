@@ -27,7 +27,7 @@ const CountryView = () => {
             }));
           }}
         >
-          Back
+          <ion-icon name="chevron-back-outline"></ion-icon> Back
         </button>
         <CardBigCountryComponent {...data} isLoading={isLoading} />
       </div>
