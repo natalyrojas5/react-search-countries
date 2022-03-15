@@ -26,7 +26,7 @@ const FilterComponent = () => {
           {region}
         </option>
       ))}
-      <option value="All">All Countries</option>
+      <option value="All">All Region</option>
     </select>
   );
 };
