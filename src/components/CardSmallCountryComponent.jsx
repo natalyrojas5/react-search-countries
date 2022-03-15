@@ -19,7 +19,7 @@ const CardSmallCountryComponent = ({
   return (
     <div className="element shadow card-small" title={name}>
       <div className="card-small-img">
-        <img src={flag} alt="Perú" className="w-100" loading="lazy" />
+        <img src={flag} alt="Perú" className="w-100" />
       </div>
       <div className="card-small-body">
         <h1 className="pointer" onClick={getByNameCountry}>

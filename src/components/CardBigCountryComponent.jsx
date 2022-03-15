@@ -26,7 +26,7 @@ const CardBigCountryComponent = ({
       {isLoading ? (
         <SkeletonComponent typeSeketon="card-small" />
       ) : (
-        <img src={flag} alt={name} className="w-100 shadow" loading="lazy" />
+        <img src={flag} alt={name} className="w-100 shadow" />
       )}
 
       <div className="card-big-body text-left w-100">

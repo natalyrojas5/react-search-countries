@@ -11,6 +11,7 @@ const FilterComponent = () => {
       defaultValue=""
       className="element shadow"
       onChange={filterByRegion}
+      name="region"
     >
       <option value="" disabled>
         Filter by Region
