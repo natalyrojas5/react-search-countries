@@ -11,7 +11,9 @@ const FilterComponent = () => {
       defaultValue=""
       className="element shadow"
       onChange={filterByRegion}
-      style="overflow-y: scroll"
+      style={{
+        overflowY: "scroll",
+      }}
       tabindex="0"
     >
       <option value="" disabled>
