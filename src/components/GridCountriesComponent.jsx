@@ -13,7 +13,7 @@ const GridCountriesComponent = () => {
 
   return (
     <>
-      <div className="grid-countries w-container" tabindex="1">
+      <div className="grid-countries w-container" tabindex="0">
         {isLoading &&
           current.length === 0 &&
           skeletons.map((index) => (
