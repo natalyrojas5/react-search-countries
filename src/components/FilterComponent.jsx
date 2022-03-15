@@ -8,6 +8,8 @@ const FilterComponent = () => {
 
   return (
     <select
+      aria-label="region"
+      name="region"
       defaultValue=""
       className="element shadow"
       onChange={filterByRegion}
